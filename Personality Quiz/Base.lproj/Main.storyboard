@@ -234,6 +234,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-AQ-JDx">
+                                <rect key="frame" x="20" y="818" width="374" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G8u-6r-eho"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -243,10 +246,13 @@
                             <constraint firstItem="vvv-iQ-Z9q" firstAttribute="centerY" secondItem="cFS-ph-cKi" secondAttribute="centerY" id="8ox-GE-B3R"/>
                             <constraint firstItem="aI4-xp-rmz" firstAttribute="top" secondItem="G8u-6r-eho" secondAttribute="top" constant="20" id="CMX-Dl-lvt"/>
                             <constraint firstItem="G8u-6r-eho" firstAttribute="trailing" secondItem="vvv-iQ-Z9q" secondAttribute="trailing" constant="20" id="EVf-tV-mda"/>
+                            <constraint firstItem="G8u-6r-eho" firstAttribute="trailing" secondItem="Hcu-AQ-JDx" secondAttribute="trailing" constant="20" id="Gjh-p5-vWk"/>
                             <constraint firstItem="vvv-iQ-Z9q" firstAttribute="leading" secondItem="G8u-6r-eho" secondAttribute="leading" constant="20" id="JNH-On-2au"/>
                             <constraint firstItem="G8u-6r-eho" firstAttribute="trailing" secondItem="aI4-xp-rmz" secondAttribute="trailing" constant="20" id="Mwz-sO-vEw"/>
                             <constraint firstItem="G8u-6r-eho" firstAttribute="trailing" secondItem="PXL-Cf-IgA" secondAttribute="trailing" constant="20" id="VIA-KL-VEm"/>
                             <constraint firstItem="aI4-xp-rmz" firstAttribute="leading" secondItem="G8u-6r-eho" secondAttribute="leading" constant="20" id="XPk-DF-kbF"/>
+                            <constraint firstItem="G8u-6r-eho" firstAttribute="bottom" secondItem="Hcu-AQ-JDx" secondAttribute="bottom" constant="20" id="apY-cM-QPd"/>
+                            <constraint firstItem="Hcu-AQ-JDx" firstAttribute="leading" secondItem="G8u-6r-eho" secondAttribute="leading" constant="20" id="h7q-ee-tup"/>
                             <constraint firstItem="G8u-6r-eho" firstAttribute="trailing" secondItem="ZT9-Vh-f4A" secondAttribute="trailing" constant="20" id="lIs-DS-T9v"/>
                             <constraint firstItem="PXL-Cf-IgA" firstAttribute="centerY" secondItem="cFS-ph-cKi" secondAttribute="centerY" id="oPg-pX-Dla"/>
                             <constraint firstItem="PXL-Cf-IgA" firstAttribute="leading" secondItem="G8u-6r-eho" secondAttribute="leading" constant="20" id="sYQ-dh-TfU"/>
@@ -254,6 +260,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="qSC-fM-yQT"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="ZT9-Vh-f4A" id="QGv-54-cVk"/>
+                        <outlet property="rangedStackView" destination="vvv-iQ-Z9q" id="UVd-Gf-gkZ"/>
+                        <outlet property="singleStackView" destination="PXL-Cf-IgA" id="9gl-ve-67s"/>
                         <segue destination="9F5-tP-QjP" kind="show" identifier="Results" id="RZC-bJ-XrF"/>
                     </connections>
                 </viewController>
