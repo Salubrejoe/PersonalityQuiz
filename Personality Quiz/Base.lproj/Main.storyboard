@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI4-xp-rmz">
-                                <rect key="frame" x="20" y="76" width="374" height="38.5"/>
+                                <rect key="frame" x="20" y="128" width="374" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -120,21 +120,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="eUA-0v-gzj" eventType="touchUpInside" id="jdd-LH-V6T"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5er-kJ-Ifn">
                                         <rect key="frame" x="0.0" y="51" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="eUA-0v-gzj" eventType="touchUpInside" id="ljn-K5-CoE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-Ob-Ixa">
                                         <rect key="frame" x="0.0" y="102" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="eUA-0v-gzj" eventType="touchUpInside" id="dMX-Tt-Noy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-B7-uku">
                                         <rect key="frame" x="0.0" y="153" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="eUA-0v-gzj" eventType="touchUpInside" id="p6M-c6-5D1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -201,6 +213,9 @@
                                         <rect key="frame" x="0.0" y="204" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="eUA-0v-gzj" eventType="touchUpInside" id="l5H-yV-9O1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -231,6 +246,9 @@
                                         <rect key="frame" x="0.0" y="90.5" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed:" destination="eUA-0v-gzj" eventType="touchUpInside" id="hzY-Os-ThA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -260,8 +278,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="qSC-fM-yQT"/>
                     <connections>
+                        <outlet property="multiSwitch1" destination="Bz4-dg-0Bn" id="rkR-pT-cQb"/>
+                        <outlet property="multiSwitch2" destination="F5n-Yz-62P" id="j3W-4c-vCb"/>
+                        <outlet property="multiSwitch3" destination="PGV-jg-1xB" id="Aam-ow-BII"/>
+                        <outlet property="multiSwitch4" destination="HSl-fl-I2G" id="QeJ-Bb-BKo"/>
+                        <outlet property="multipleLabel1" destination="PYB-5d-JsU" id="mYr-c8-I5y"/>
+                        <outlet property="multipleLabel2" destination="fnE-ww-T6P" id="2c8-bQ-KZh"/>
+                        <outlet property="multipleLabel3" destination="c0d-pK-Aea" id="05k-ec-7B6"/>
+                        <outlet property="multipleLabel4" destination="Bxl-a3-xB3" id="iyj-ob-Wea"/>
                         <outlet property="multipleStackView" destination="ZT9-Vh-f4A" id="QGv-54-cVk"/>
+                        <outlet property="questionLabel" destination="aI4-xp-rmz" id="GD1-c1-y72"/>
+                        <outlet property="questionProgressView" destination="Hcu-AQ-JDx" id="dNb-wi-wCW"/>
+                        <outlet property="rangedLabel1" destination="7nL-LR-OQB" id="VVg-PG-Vcf"/>
+                        <outlet property="rangedLabel2" destination="5IG-HQ-jUO" id="aAZ-Vf-av5"/>
+                        <outlet property="rangedSlider" destination="CLA-Tb-eeX" id="6Dv-Fi-bhf"/>
                         <outlet property="rangedStackView" destination="vvv-iQ-Z9q" id="UVd-Gf-gkZ"/>
+                        <outlet property="singleButton1" destination="ch5-ta-sXK" id="CXY-gq-U8v"/>
+                        <outlet property="singleButton2" destination="5er-kJ-Ifn" id="K7h-LK-QC8"/>
+                        <outlet property="singleButton3" destination="BH4-Ob-Ixa" id="IwX-bi-fru"/>
+                        <outlet property="singleButton4" destination="0vV-B7-uku" id="RNL-BL-zDR"/>
                         <outlet property="singleStackView" destination="PXL-Cf-IgA" id="9gl-ve-67s"/>
                         <segue destination="9F5-tP-QjP" kind="show" identifier="Results" id="RZC-bJ-XrF"/>
                     </connections>
@@ -318,8 +353,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vom-w0-HjC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pMl-U6-GLr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bYz-Ht-5qx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bYz-Ht-5qx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
