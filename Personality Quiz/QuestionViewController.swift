@@ -76,6 +76,12 @@ class QuestionViewController: UIViewController {
         updateUI()
         
     }
+    
+    
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultViewController? {
+        return ResultViewController(coder: coder, responses: answersChosen)
+    }
+    
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         
         let currentAnswers = questions[questionIndex].answers
@@ -127,6 +133,14 @@ class QuestionViewController: UIViewController {
     }
     func nextQuestion() {
         
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "Results", sender: nil)
+        }
+        
     }
     
     func updateUI() {
@@ -162,6 +176,10 @@ class QuestionViewController: UIViewController {
     
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         multipleLabel1.text = answers[0].text
         multipleLabel2.text = answers[1].text
         multipleLabel3.text = answers[2].text
@@ -170,6 +188,7 @@ class QuestionViewController: UIViewController {
     
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangedSlider.setValue(0.5, animated: false)
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
     }
